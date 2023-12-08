@@ -32,7 +32,7 @@ include_once("../config/config.php");
         </div>
         <hr />
         </div>
-        <form action="" method="post">
+        <form action="../config/cadastro.php" method="post">
             <div class="content">
                 <div id="dados">
                     <!--SECAO DADOS-->
@@ -116,11 +116,11 @@ include_once("../config/config.php");
                 </article>
 
             </div>
-        </form>
         <section id="section-btn">
-            <button class="btncad" id="cancel"><i class="fas fa-ban" style="margin-right: 2px;"></i>Cancelar</button>
-            <button class="btncad" id="avan"><i class="fas fa-arrow-right" style="margin-right: 2px;"></i>Avançar</button>
+            <button class="btncad" id="cancel" type="reset"><i class="fas fa-ban" style="margin-right: 2px;"></i>Cancelar</button>
+            <button class="btncad" id="avan" type="submit"><i class="fas fa-save" style="margin-right: 2px;"></i>Cadastrar</button>
         </section>
+        </form>
     </main>
     <footer><?php include("../inc/footer.php") ?></footer>
 

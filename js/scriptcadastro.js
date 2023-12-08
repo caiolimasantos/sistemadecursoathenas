@@ -23,18 +23,20 @@ function TabNavagtion() {
         const target = event.currentTarget
         showCurrentTab(target.dataset.id)
     }
+    
 
     function listenForChange() {
         html.links.forEach(tab => {
             tab.addEventListener('click', selectTab)
         })
+        
     }
 
     function init() {
         hideAllTabContent()
         listenForChange()
         html.content[0].style.display="block";
-        console.log(html.buttom)
+        
     }
 
     return {
