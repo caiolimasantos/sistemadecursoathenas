@@ -1,0 +1,1 @@
+cadastrarAlunoButton.addEventListener("click", cadastrarAluno);

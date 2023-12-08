@@ -1,0 +1,49 @@
+:root{
+    --main-color: #2C4876;
+    --main-color-2:#E0E0E0;
+    --color-hover: #EDA92A;
+    --error-color: #ff0000;
+    --placeholder: 1.2rem;
+    --fontsize: 1rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background: linear-gradient(to bottom, var(--main-color), var(--main-color-2)) no-repeat;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+input, button{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+
+form{
+    width: 300px;
+}
+input{
+    border: none;
+}
+
+img {
+    width: 20%;
+    height: fit-content;
+    
+}
+
+#button {
+    display: none;
+}
