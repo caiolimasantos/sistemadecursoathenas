@@ -32,7 +32,8 @@ include_once("../config/config.php");
         </div>
         <hr />
         </div>
-        <form action="../config/cadastro.php" method="post">
+        <form action="../config/cadastro.php" method="post" autocomplete="none"
+        onsubmit="return checaCadAlunos()" name="cadastro_alunos" onchange="return mascaraForm()">
             <div class="content">
                 <div id="dados">
                     <!--SECAO DADOS-->
@@ -126,6 +127,7 @@ include_once("../config/config.php");
 
     <script src="../js/funcao.js"></script>
     <script src="../js/scriptcadastro.js"></script>
+    <script src="../js/checkFormulario.js"></script>
 </body>
 
 </html>

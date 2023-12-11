@@ -8,4 +8,3 @@ function logout(){
 }
 logoutButton.addEventListener("click", logout);
 
-
