@@ -8,70 +8,57 @@ function TabNavagtion() {
     }
 
     function hideAllTabContent() {
-        html.content.forEach(section =>{
+        html.content.forEach(section => {
             section.style.display = "none";
         })
-        
+
     }
     function showCurrentTab(id) {
         const tabcontent = $('#' + id)
         tabcontent.style.display = "block"
     }
 
-    function selectTab(event){
+    function selectTab(event) {
         hideAllTabContent()
         const target = event.currentTarget
         showCurrentTab(target.dataset.id)
     }
-    
+
 
     function listenForChange() {
         html.links.forEach(tab => {
             tab.addEventListener('click', selectTab)
         })
-        
+
     }
 
     function init() {
         hideAllTabContent()
         listenForChange()
-        html.content[0].style.display="block";
-        
+        html.content[0].style.display = "block";
+
     }
 
     return {
         init
     }
 }
-function mascaraForm(){
-    console.log($)
-   /* $('#telefone').mask("(99) 9999-9999?9");
-    /*$('#dtn').mask('99/99/9999');
-       /* $('#dataini').mask('99/99/9999');
-        $('#datafim').mask('99/99/9999');
-        $('form').on('focusout', '#telefone', function(event) {
-          var target, phone, element;
-          target = (event.currentTarget) ? event.currentTarget : event.srcElement;
-          phone = target.value.replace(/\D/g, '');
-          element = $(target);
-          element.unmask();
-          if (phone.length > 10) {
-            element.mask("(99) 99999-999?9");
-          } else {
-            element.mask("(99) 9999-9999?9");
-          }
-        });
-        $('#cpf').mask('999.999.999-99');
-    
-       /* $('#posdata').mask('99/99/9999');
-        $('#poshora').mask('99:99');*/
-    
-      }
 
-window.addEventListener('load', ()=>{
+
+$('#cpf').addEventListener('input', ()=> {
+    var i = $('#cpf').value.length; //aqui pega o tamanho do input
+    if (i === 3 || i === 7) //aqui faz a divisoes colocando um ponto no terceiro e setimo indice
+        $('#cpf').value = $('#cpf').value + ".";
+    else if (i === 11) //aqui faz a divisao colocando o tracinho no decimo primeiro indice
+        $('#cpf').value = $('#cpf').value + "-";
+})
+
+
+
+window.addEventListener('load', () => {
     const tabNavagtion = TabNavagtion()
     tabNavagtion.init()
-    
+
 })
 
 

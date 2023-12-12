@@ -33,7 +33,7 @@ include_once("../config/config.php");
         <hr />
         </div>
         <form action="../config/cadastro.php" method="post" autocomplete="none"
-        onsubmit="return checaCadAlunos()" name="cadastro_alunos" onchange="return mascaraForm()">
+        onsubmit="return checaCadAlunos()" name="cadastro_alunos">
             <div class="content">
                 <div id="dados">
                     <!--SECAO DADOS-->
@@ -45,7 +45,7 @@ include_once("../config/config.php");
                                 <div><label for="email">Email:</label></div>
                                 <div><input type="email" name="email" id="email" class="ip"></div>
                                 <div><label for="cpf">CPF:</label></div>
-                                <div><input type="text" name="cpf" id="cpf" class="ip"></div>
+                                <div><input type="text" name="cpf" id="cpf" class="ip" maxlength="14"></div>
                                 <div><label for="pais">País:</label></div>
                                 <div><select name="pais" id="pais" class="ip select">
                                         <?php pais(); ?>
