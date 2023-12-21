@@ -32,8 +32,8 @@ include_once("../config/config.php");
         </div>
         <hr />
         </div>
-        <form action="../config/cadastro.php" method="post" autocomplete="none"
-        onsubmit="return checaCadAlunos()" name="cadastro_alunos">
+    <form action="../config/cadastro.php" method="post" autocomplete="none" onsubmit="return checaCadAlunos()" name="cadastro_alunos">
+        <!--<form action="" method="post" autocomplete="none" onsubmit="return checaCadAlunos()" name="cadastro_alunos">-->
             <div class="content">
                 <div id="dados">
                     <!--SECAO DADOS-->
@@ -62,7 +62,7 @@ include_once("../config/config.php");
                                 <div><label for="dtn">Data de Nasc:</label></div>
                                 <div><input type="date" name="dtn" id="dtn" class="ip"></div>
                                 <div><label for="telefone">Telefone:</label></div>
-                                <div><input type="tel" name="telefone" id="telefone" class="ip"></div>
+                                <div><input type="tel" name="telefone" id="telefone" class="ip" maxlength="13"></div>
                                 <div><label for="rg">RG:</label></div>
                                 <div><input type="text" name="rg" id="rg" class="ip"></div>
                                 <div><label for="estado">Estado:</label></div>
