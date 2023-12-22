@@ -43,5 +43,21 @@ function showCourse(){
         }
     }
 }
+
+function listaAlunos(){
+    $responde = conexao("SELECT * FROM usuarios");
+    if (mysqli_num_rows($responde) > 0) {
+        while ($row = mysqli_fetch_array($responde)) {
+            echo "<tr>
+                <td class='text-center'>".$row["ID"]."</td>
+                <td class='text-center'>".$row["NOME"]."</td>
+                <td class='text-center'>".$row["DTN"]."</td>
+                <td class='text-center'>".$row["EMAIL"]."</td>
+                <td class='text-center'>".$row["USUARIO"]."</td>
+                <td class='text-center'>".$row["SENHA"]."</td>
+            </tr>";
+        }
+    }
+}
 ?>
 

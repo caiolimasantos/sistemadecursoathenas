@@ -25,7 +25,6 @@ include_once("../config/config.php")
     </main>
     <footer><?php include("../inc/footer.php")?></footer>
     <script src="../js/funcao.js"></script>
-    <script src="../js/scriptadmin.js"></script>
 </body>
 
 </html>
