@@ -21,7 +21,7 @@ include_once("../config/config.php");
     <main id="main-cd">
         <section id="section-cd">
             <h1><i class="fas fa-user-friends"></i>Cadastro de Alunos</h1>
-            <button class="btncad" id="lia"><i class="fas fa-list" style="margin-right: 2px;"></i>Listar Alunos</button>
+            <button class="btncad" id="lta"><i class="fas fa-list" style="margin-right: 2px;"></i>Listar Alunos</button>
         </section>
         <div id="tabs">
             <div class="tab-link">
@@ -109,6 +109,12 @@ include_once("../config/config.php");
                                         <option value="8">8</option>
                                         <option value="9">9</option>
                                         <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div><label for="acessobloqueado">Acesso Bloqueado:</label></div>
+                                <div><select name="acessobloqueado" id="acessobloqueado" class="ip select">
+                                        <option value="N">Não</option>
+                                        <option value="S">Sim</option>
                                     </select>
                                 </div>
                             </section>

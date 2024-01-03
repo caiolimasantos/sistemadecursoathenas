@@ -1,9 +1,9 @@
 <?php 
-    $host = "";
+    $host = "dk.athenasacademy.com.br";
     $port = 3306;
-    $username = "";
-    $password = "";
-    $database = "";
+    $username = "athena85_sistemacurso";
+    $password = "417782Ja@";
+    $database = "athena85_sistemacurso";
 
     $strcon = mysqli_connect($host, $username, $password, $database, $port);
 

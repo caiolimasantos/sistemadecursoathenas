@@ -11,6 +11,6 @@ function listarAlunos(){
     window.location.href="/pages/lista-alunos.php"
 }
 logoutButton.addEventListener("click", logout);
-cadastrarAlunoButton.addEventListener("click", cadastrarAluno);
 listarAlunoButton.addEventListener("click", listarAlunos);
+cadastrarAlunoButton.addEventListener("click", cadastrarAluno);
 

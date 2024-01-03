@@ -13,12 +13,13 @@ $dados = [
     $estado=$_REQUEST["estado"],
     $endereco=$_REQUEST["endereco"],
     $senha=$_REQUEST["senha"],
+    $acesso=$_REQUEST["acessobloqueado"],
     $auladia=$_REQUEST["auladia"],
 
 ];
 extract($dados);
-$sql = "INSERT INTO `usuarios`(`NOME`, `EMAIL`, `USUARIO`, `SENHA`, `CPF`, `PAIS`, `CIDADE`, `DTN`, `TELEFONE`, `RG`, `ESTADO`, `ENDERECO`, `AULADIA`, `nivelpermissao`) VALUES
-('$nome','$email','$login','$senha','$cpf','$pais','$cidade','$dtn','$telefone','$rg','$estado','$endereco','$auladia','4')";
+$sql = "INSERT INTO `usuarios`(`NOME`, `EMAIL`, `USUARIO`, `SENHA`, `CPF`, `PAIS`, `CIDADE`, `DTN`, `TELEFONE`, `RG`, `ESTADO`, `ENDERECO`, `AULADIA`,`BLOQUEADO`, `nivelpermissao`) VALUES
+('$nome','$email','$login','$senha','$cpf','$pais','$cidade','$dtn','$telefone','$rg','$estado','$endereco','$acesso','$auladia','4')";
 
 if(mysqli_query($strcon, $sql)){
     echo "<script>alert('Usuário cadastrado com sucesso!')</script>";
